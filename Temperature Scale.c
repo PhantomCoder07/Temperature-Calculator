@@ -23,6 +23,30 @@ float convert6 (float k)
 {
     return (((k-273.15)*9)/5)+32;
 }
+float convert7 (float c)
+{
+    return ((c*9)/5)+491.67;
+}
+float convert8 (float r)
+{
+    return ((r-491.67)*5)/9;
+}
+float convert9 (float f)
+{
+    return f+459.67;
+}
+float convert10 (float r)
+{
+    return r-459.67;
+}
+float convert11 (float k)
+{
+    return (k*9)/5;
+}
+float convert12 (float r)
+{
+    return (r*5)/9;
+}
 int main()
 {
     float temp;
@@ -51,6 +75,8 @@ int main()
                         printf("The result: %.2f\n",convert1(temp));
                     else if (out=='k' || out=='K')
                         printf("The result: %.2f\n",convert3(temp));
+                    else if (out=='r' || out=='R')
+                        printf("The result: %.2f\n",convert7(temp));
                     else
                         printf("Wrong entry\n");
                 }
@@ -60,6 +86,8 @@ int main()
                         printf("The result: %.2f\n",convert2(temp));
                     else if (out=='k' || out=='K')
                         printf("The result: %.2f\n",convert5(temp));
+                    else if (out=='r' || out=='R')
+                        printf("The result: %.2f\n",convert9(temp));
                     else
                         printf("Wrong entry\n");
                 }
@@ -69,6 +97,19 @@ int main()
                         printf("The result: %.2f\n",convert4(temp));
                     else if (out=='f' || out=='F')
                         printf("The result: %.2f\n",convert6(temp));
+                    else if (out=='r' || out=='R')
+                        printf("The result: %.2f\n",convert11(temp));
+                    else
+                        printf("Wrong entry\n");
+                }
+                else if (in=='r' || in=='R')
+                {
+                    if (out=='c' || out=='C')
+                        printf("The result: %.2f\n",convert8(temp));
+                    else if (out=='f' || out=='F')
+                        printf("The result: %.2f\n",convert10(temp));
+                    else if (out=='k' || out=='K')
+                        printf("The result: %.2f\n",convert12(temp));
                     else
                         printf("Wrong entry\n");
                 }
@@ -88,6 +129,5 @@ int main()
             continue;
         }
     }
-
     return 0;
 }
