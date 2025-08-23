@@ -1,2 +1,2 @@
-# Temperature-Scale
+# Temperature-Calculator
 Convert any temperature
