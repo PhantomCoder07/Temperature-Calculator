@@ -182,7 +182,6 @@ int main()
     printf("Here's the history:\n");
     printf("----------------------------------------------------------------------\n");
     char ch;
-    fclose(fp);
     fp = fopen("History.txt","r");
     while (!feof(fp))
     {
@@ -192,3 +191,4 @@ int main()
     fclose(fp);
     return 0;
 }
+
