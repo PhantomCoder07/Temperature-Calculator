@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main()
+{
+    int t;
+    printf("Enter temperature in Celsius: ");
+    scanf("%d",&t);
+    if (t>=18 && t<=24)
+        printf("The temperature is comfortable\n");
+    else if (t<18)
+        printf("The temperature is cold\n");
+    else
+        printf("The temperature is Hot\n");
+    return 0;
+}
